@@ -1,0 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.leaflet-container{
+  width: 30%;
+  height: 200px;
+}
