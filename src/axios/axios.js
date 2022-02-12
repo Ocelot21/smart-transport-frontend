@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //export const urlLink = 'http://localhost:4000';
-export const urlLink = 'https://smart-transport-backend.herokuapp.com/';
+export const urlLink = 'https://smart-transport-backend.herokuapp.com';
 
 export const requestMethods = {
   DELETE: 'DELETE',
