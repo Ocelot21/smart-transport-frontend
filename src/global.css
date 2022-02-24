@@ -1,0 +1,88 @@
+div.model {
+  background-color: blue;
+  color: white;
+  float: left;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+div.model:hover {
+  background-color: rgb(110, 110, 255);
+}
+
+div.login {
+  margin: 20px;
+}
+
+img {
+  height: 25px;
+}
+
+p {
+  margin: 30px;
+}
+
+nav ul {
+  list-style: none;
+  background-color: blue;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid blue;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: 0.3s background-color;
+  padding: 0px 5px;
+}
+
+nav a:hover {
+  background-color: rgb(110, 110, 255);
+}
+
+nav a.active {
+  background-color: blueviolet;
+  color: white;
+  cursor: default;
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 16px;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #3e8f41;
+}
+
+@media screen and (min-width: 600px) {
+  nav li {
+    float: left;
+  }
+  nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  nav {
+    background-color: blue;
+  }
+}
