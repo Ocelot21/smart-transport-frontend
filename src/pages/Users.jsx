@@ -30,21 +30,15 @@ const Users = () => {
     }
   };
   const onChangeUsername = (e) => {
-    if (e?.target?.value) {
-      setUsername(e?.target?.value);
-    }
+    setUsername(e?.target?.value);
   };
 
   const onChangePassword = (e) => {
-    if (e?.target?.value) {
-      setPassowrd(e?.target?.value);
-    }
+    setPassowrd(e?.target?.value);
   };
 
   const onChangeEmail = (e) => {
-    if (e?.target?.value) {
-      setEmail(e?.target?.value);
-    }
+    setEmail(e?.target?.value);
   };
 
   const createANewDriver = async () => {

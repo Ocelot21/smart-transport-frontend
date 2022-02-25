@@ -22,22 +22,22 @@ const Busses = () => {
 
   return (
     <div>
+      <nav>
+        <ul>
+          <li className='home'>
+            <a href='/'>
+              <img src={Icon} alt='SmartTransport' />
+              SmartTransport
+            </a>
+          </li>
+          <li>
+            <a href='/login'>Prijava</a>
+          </li>
+        </ul>
+      </nav>
       {busses.map((el) => {
         return (
           <div>
-            <nav>
-              <ul>
-                <li className='home'>
-                  <a href='/'>
-                    <img src={Icon} alt='SmartTransport' />
-                    SmartTransport
-                  </a>
-                </li>
-                <li>
-                  <a href='/login'>Prijava</a>
-                </li>
-              </ul>
-            </nav>
             <div key={el._id} className='model'>
               <p>ID: {el._id}</p>
               <p>ID autobusa: {el.busId}</p>

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import fetchAllBusses from "../axios/fetchAllBusses";
 import fetchAllUsers from "../axios/fetchAllUsers";
+import createANewBus from "../axios/createNewBus";
 import getMe from "../axios/getMe";
 import "../global.css";
 import Icon from "../bus.ico";
@@ -38,27 +39,19 @@ const Busses = () => {
     }
   };
   const onChangeBusId = (e) => {
-    if (e?.target?.value) {
-      setBusId(e?.target?.value);
-    }
+    setBusId(e?.target?.value);
   };
   const onChangeSeats = (e) => {
-    if (e?.target?.value) {
-      setSeats(e?.target?.value);
-    }
+    setSeats(e?.target?.value);
   };
   const onChangeRoute = (e) => {
-    if (e?.target?.value) {
-      setRoute(e?.target?.value);
-    }
+    setRoute(e?.target?.value);
   };
   const onChangeDriver = (e) => {
-    if (e?.target?.value) {
-      setDriver(e?.target?.value);
-    }
+    setDriver(e?.target?.value);
   };
 
-  const createANewBus = async () => {
+  const onClickCreateANewBus = async () => {
     await createANewBus({
       busId,
       seats,
@@ -82,25 +75,25 @@ const Busses = () => {
 
   return (
     <div>
+      <nav>
+        <ul>
+          <li className='home'>
+            <a href='/'>
+              <img src={Icon} alt='SmartTransport' />
+              SmartTransport
+            </a>
+          </li>
+          <li>
+            <a href='/users'>Lista korisnika</a>
+          </li>
+          <li>
+            <a href='/busses'>Lista autobusa</a>
+          </li>
+        </ul>
+      </nav>
       {busses.map((el) => {
         return (
           <div>
-            <nav>
-              <ul>
-                <li className='home'>
-                  <a href='/'>
-                    <img src={Icon} alt='SmartTransport' />
-                    SmartTransport
-                  </a>
-                </li>
-                <li>
-                  <a href='/users'>Lista korisnika</a>
-                </li>
-                <li>
-                  <a href='/busses'>Lista autobusa</a>
-                </li>
-              </ul>
-            </nav>
             <div key={el._id} className='model'>
               <p>ID: {el._id}</p>
               <p>ID autobusa: {el.busId}</p>
@@ -149,7 +142,7 @@ const Busses = () => {
               })}
             </select>
           </div>
-          <button onClick={createANewBus}>Create</button>
+          <button onClick={onClickCreateANewBus}>Create</button>
         </div>
       )}
     </div>
